@@ -26,7 +26,7 @@ const testData = [
 const CardList = (props) => {
 	return (
 		<div>
-			{testData.map((profile) => (
+			{props.profiles.map((profile) => (
 				<Card {...profile} />
 			))}
 		</div>
@@ -48,12 +48,36 @@ class Card extends Component {
 	}
 }
 
+class Form extends Component {
+	render() {
+		return (
+			<form action="">
+				<input type="text" placeholder="GitHub username" />
+				<button>Add Card</button>
+			</form>
+		);
+	}
+}
+
 class App extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			profiles: testData
+		};
+	}
+
+	//Newest declarations alternative
+	/* state = {
+		profiles: testData;
+	} */
+
 	render() {
 		return (
 			<div>
 				<h1 className="header">{this.props.title}</h1>
-				<CardList />
+				<Form />
+				<CardList profiles={this.state.profiles} />
 			</div>
 		);
 	}

@@ -18,5 +18,19 @@ h1{text-align: center; padding: 15px 0;}
   &:after{content: ""; clear: both; display: block;}
 }
 
+/*■■■■■■■■■■■■■■■■■■ Form */
+
+form{
+  width: 90%; margin: 20px auto; padding: 25px 15px; border: 1px solid rgba(#fff, 0.2); text-align: center;
+
+  input{
+    padding: 5px 10px; outline: none; border: 1px solid #fff; width: 40%; font-size: 1.1rem; border-radius: 5px 0 0 5px;
+    &:focus{border-color: #a56;}
+  }
+  button{ padding: 5px 10px; outline: none; border: 1px solid #a56; text-transform: uppercase; width: 20%; font-size: 1.1rem; border-radius: 0 5px 5px 0; color: #222; background: #a56;}
+}
+
+/*■■■■■■■■■■■■■■■■■■  */
+/*■■■■■■■■■■■■■■■■■■  */
 /*■■■■■■■■■■■■■■■■■■  */
 /*■■■■■■■■■■■■■■■■■■  */
