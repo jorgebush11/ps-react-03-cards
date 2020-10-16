@@ -49,10 +49,21 @@ class Card extends Component {
 }
 
 class Form extends Component {
+	userNameInput = React.createRef();
+
+	handleSubmit = (event) => {
+		event.preventDefault();
+		console.log(this.userNameInput.current.value);
+	};
+
 	render() {
 		return (
-			<form action="">
-				<input type="text" placeholder="GitHub username" />
+			<form action="" onSubmit={this.handleSubmit}>
+				<input
+					type="text"
+					placeholder="GitHub username"
+					ref={this.userNameInput}
+				/>
 				<button>Add Card</button>
 			</form>
 		);
@@ -66,11 +77,6 @@ class App extends Component {
 			profiles: testData
 		};
 	}
-
-	//Newest declarations alternative
-	/* state = {
-		profiles: testData;
-	} */
 
 	render() {
 		return (
