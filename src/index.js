@@ -26,14 +26,16 @@ const testData = [
 const CardList = (props) => {
 	return (
 		<div>
-			<Card />
+			<Card {...testData[0]} />
+			<Card {...testData[1]} />
+			<Card {...testData[2]} />
 		</div>
 	);
 };
 
 class Card extends Component {
 	render() {
-		const profile = testData[0];
+		const profile = this.props;
 		return (
 			<div className="profile">
 				<img src={profile.avatar_url} alt="" />
